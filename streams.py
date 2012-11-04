@@ -112,7 +112,7 @@ def help():
     """
 
 def main(argv):
-    NB_RUNS = 100
+    NB_RUNS = 1000
     score = 0
     player = player_from_argv(argv)
     if player == None:
@@ -120,6 +120,7 @@ def main(argv):
     else:
         for i in range(NB_RUNS):
             run_score = Match(player).run()
+            print run_score
             score += run_score 
     print score / float(NB_RUNS)
 
